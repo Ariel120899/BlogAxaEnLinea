@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Imagen no disponible">
+  <rect width="800" height="450" fill="#EBF5FF"/>
+  <rect x="40" y="40" width="720" height="370" rx="12" fill="#DCEEFF" stroke="#A6A6A6"/>
+  <text x="400" y="235" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="28" fill="#0096AE">Sin imagen</text>
+</svg>

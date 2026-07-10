@@ -1,0 +1,21 @@
+/**
+ * Theme Name: Astra Child
+ * Theme URI: https://github.com/blogbase
+ * Description: Tema hijo de Astra. Personalizaciones del sitio sin modificar el tema padre.
+ * Author: BlogBase
+ * Author URI: https://github.com/blogbase
+ * Template: astra
+ * Version: 1.0.0
+ * Requires at least: 5.3
+ * Tested up to: 7.0
+ * Requires PHP: 7.4
+ * License: GNU General Public License v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: astra-child
+ */
+
+/* Personalizaciones del tema hijo */
+
+body.blog-qualitas-page {
+	font-family: 'Montserrat', sans-serif;
+}
