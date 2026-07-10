@@ -30,33 +30,37 @@
 		button.textContent = loadingText;
 		button.classList.add('is-loading');
 
-		var body = new URLSearchParams();
-		body.append('action', 'astra_child_load_more_posts');
-		body.append('nonce', nonce);
-		body.append('offset', String(offset));
+		var body = JSON.stringify({
+			offset: offset,
+			nonce: nonce
+		});
 
 		fetch(ajaxUrl, {
 			method: 'POST',
 			credentials: 'same-origin',
 			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+				'Content-Type': 'application/json; charset=UTF-8'
 			},
-			body: body.toString()
+			body: body
 		})
 			.then(function (response) {
+				if (!response.ok) {
+					throw new Error('HTTP ' + response.status);
+				}
+
 				return response.json();
 			})
-			.then(function (payload) {
-				if (!payload || !payload.success || !payload.data) {
+			.then(function (data) {
+				if (!data || typeof data.html === 'undefined') {
 					throw new Error('Invalid response');
 				}
 
-				if (payload.data.html) {
-					list.insertAdjacentHTML('beforeend', payload.data.html);
+				if (data.html) {
+					list.insertAdjacentHTML('beforeend', data.html);
 				}
 
-				if (payload.data.has_more) {
-					button.setAttribute('data-offset', String(payload.data.next_offset));
+				if (data.has_more) {
+					button.setAttribute('data-offset', String(data.next_offset));
 					button.disabled = false;
 					button.textContent = defaultText;
 				} else {

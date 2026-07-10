@@ -62,12 +62,13 @@ function astra_child_render_horizontal_post_cards( $posts ) {
 }
 
 /**
- * Endpoint AJAX para cargar más artículos.
+ * Genera la respuesta de carga incremental.
+ *
+ * @param int $offset Desplazamiento actual.
+ * @return array<string, mixed>
  */
-function astra_child_ajax_load_more_posts() {
-	check_ajax_referer( 'astra_child_load_more', 'nonce' );
-
-	$offset   = isset( $_POST['offset'] ) ? absint( $_POST['offset'] ) : 0;
+function astra_child_get_load_more_response( $offset ) {
+	$offset   = absint( $offset );
 	$per_page = 3;
 
 	$query = new WP_Query(
@@ -90,15 +91,86 @@ function astra_child_ajax_load_more_posts() {
 	$loaded_count = (int) $query->post_count;
 	$next_offset  = $offset + $loaded_count;
 	$total        = astra_child_get_latest_posts_total();
-	$has_more     = $next_offset < $total;
 
-	wp_send_json_success(
-		array(
-			'html'        => $html,
-			'has_more'    => $has_more,
-			'next_offset' => $next_offset,
-		)
+	return array(
+		'html'        => $html,
+		'has_more'    => $next_offset < $total,
+		'next_offset' => $next_offset,
 	);
+}
+
+/**
+ * Valida el nonce de carga incremental.
+ *
+ * @param string $nonce Nonce recibido.
+ * @return bool
+ */
+function astra_child_validate_load_more_nonce( $nonce ) {
+	return (bool) wp_verify_nonce( $nonce, 'astra_child_load_more' );
+}
+
+/**
+ * Endpoint AJAX para cargar más artículos.
+ */
+function astra_child_ajax_load_more_posts() {
+	check_ajax_referer( 'astra_child_load_more', 'nonce' );
+
+	$offset = isset( $_POST['offset'] ) ? absint( $_POST['offset'] ) : 0;
+
+	wp_send_json_success( astra_child_get_load_more_response( $offset ) );
 }
 add_action( 'wp_ajax_astra_child_load_more_posts', 'astra_child_ajax_load_more_posts' );
 add_action( 'wp_ajax_nopriv_astra_child_load_more_posts', 'astra_child_ajax_load_more_posts' );
+
+/**
+ * Endpoint REST para entornos que bloquean POST a admin-ajax.php.
+ *
+ * @param WP_REST_Request $request Petición REST.
+ * @return WP_REST_Response|WP_Error
+ */
+function astra_child_rest_load_more_posts( WP_REST_Request $request ) {
+	$nonce = (string) $request->get_param( 'nonce' );
+
+	if ( ! astra_child_validate_load_more_nonce( $nonce ) ) {
+		return new WP_Error(
+			'astra_child_invalid_nonce',
+			__( 'Solicitud no válida.', 'astra-child' ),
+			array( 'status' => 403 )
+		);
+	}
+
+	$offset = absint( $request->get_param( 'offset' ) );
+
+	return rest_ensure_response( astra_child_get_load_more_response( $offset ) );
+}
+
+/**
+ * Registra la ruta REST de carga incremental.
+ */
+function astra_child_register_load_more_rest_route() {
+	register_rest_route(
+		'astra-child/v1',
+		'/load-more',
+		array(
+			'methods'             => WP_REST_Server::CREATABLE,
+			'callback'            => 'astra_child_rest_load_more_posts',
+			'permission_callback' => '__return_true',
+			'args'                => array(
+				'offset' => array(
+					'required'          => true,
+					'type'              => 'integer',
+					'sanitize_callback' => 'absint',
+					'validate_callback' => function ( $value ) {
+						return is_numeric( $value ) && $value >= 0;
+					},
+				),
+				'nonce'  => array(
+					'required'          => true,
+					'type'              => 'string',
+					'sanitize_callback' => 'sanitize_text_field',
+				),
+			),
+		)
+	);
+}
+add_action( 'rest_api_init', 'astra_child_register_load_more_rest_route' );

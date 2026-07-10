@@ -72,7 +72,7 @@ $latest_query = new WP_Query(
 							class="blog-qualitas-masarticulos"
 							data-blog-load-more
 							data-offset="<?php echo esc_attr( $initial_count ); ?>"
-							data-ajax-url="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>"
+							data-ajax-url="<?php echo esc_url( rest_url( 'astra-child/v1/load-more' ) ); ?>"
 							data-nonce="<?php echo esc_attr( wp_create_nonce( 'astra_child_load_more' ) ); ?>"
 							data-loading-text="<?php esc_attr_e( 'Cargando...', 'astra-child' ); ?>"
 						>
