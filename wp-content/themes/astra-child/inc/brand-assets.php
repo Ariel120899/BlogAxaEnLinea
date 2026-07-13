@@ -15,6 +15,7 @@ defined( 'ABSPATH' ) || exit;
 function astra_child_get_brand_assets_map() {
 	$assets = array(
 		'axa'      => array(
+			'logo_header'        => 'logo-axa.svg',
 			'logo_footer'        => 'logo-seguro-inteligente-blanco.svg',
 			'banner_home_desk'   => 'banner-blog-axa-A2.webp',
 			'banner_home_mob'    => 'banner-blog-axa-A3.webp',

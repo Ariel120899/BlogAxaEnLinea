@@ -53,6 +53,24 @@ function astra_child_get_excluded_category_slugs() {
 }
 
 /**
+ * IDs de categorías excluidas del listado del sidebar.
+ *
+ * @return int[]
+ */
+function astra_child_get_excluded_category_ids() {
+	$ids = array_map(
+		static function ( $slug ) {
+			$category = get_category_by_slug( $slug );
+
+			return $category ? (int) $category->term_id : 0;
+		},
+		astra_child_get_excluded_category_slugs()
+	);
+
+	return array_values( array_filter( $ids ) );
+}
+
+/**
  * Devuelve la primera categoría visible de un post.
  */
 function astra_child_get_primary_category( $post_id = null ) {

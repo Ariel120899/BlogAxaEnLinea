@@ -11,10 +11,13 @@ require_once get_stylesheet_directory() . '/inc/helpers.php';
 require_once get_stylesheet_directory() . '/inc/class-walker-category.php';
 require_once get_stylesheet_directory() . '/inc/theme-config.php';
 require_once get_stylesheet_directory() . '/inc/brand-assets.php';
+require_once get_stylesheet_directory() . '/inc/header-logo.php';
 require_once get_stylesheet_directory() . '/inc/customizer.php';
 require_once get_stylesheet_directory() . '/inc/blog-load-more.php';
 require_once get_stylesheet_directory() . '/inc/archive-pagination.php';
+require_once get_stylesheet_directory() . '/inc/sidebar-form.php';
 require_once get_stylesheet_directory() . '/inc/quote-widget.php';
+require_once get_stylesheet_directory() . '/inc/gmm-widget.php';
 require_once get_stylesheet_directory() . '/inc/footer.php';
 
 /**
@@ -126,6 +129,27 @@ function astra_child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles', 15 );
 
 /**
+ * Usa widgets del sidebar legacy (sidebar-1) en blog-sidebar si aún no están asignados.
+ *
+ * @param array<string, array<int, string>> $sidebars_widgets Sidebars registrados.
+ * @return array<string, array<int, string>>
+ */
+function astra_child_map_legacy_sidebar_widgets( $sidebars_widgets ) {
+	if ( is_admin() && ! wp_doing_ajax() ) {
+		return $sidebars_widgets;
+	}
+
+	if ( empty( $sidebars_widgets['sidebar-1'] ) || ! empty( $sidebars_widgets['blog-sidebar'] ) ) {
+		return $sidebars_widgets;
+	}
+
+	$sidebars_widgets['blog-sidebar'] = $sidebars_widgets['sidebar-1'];
+
+	return $sidebars_widgets;
+}
+add_filter( 'sidebars_widgets', 'astra_child_map_legacy_sidebar_widgets' );
+
+/**
  * Usa layout sin sidebar de Astra en home y entradas.
  */
 function astra_child_blog_home_layout( $layout ) {
@@ -149,6 +173,13 @@ function astra_child_body_class( $classes ) {
 
 	if ( is_singular( 'post' ) ) {
 		$classes[] = 'blog-qualitas-single';
+
+		$form_type = astra_child_get_sidebar_form_type();
+		if ( 'auto' === $form_type ) {
+			$classes[] = 'blog-sidebar-form-auto';
+		} elseif ( 'gmm' === $form_type ) {
+			$classes[] = 'blog-sidebar-form-gmm';
+		}
 	}
 
 	if ( is_author() ) {

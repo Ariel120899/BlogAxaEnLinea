@@ -4,6 +4,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
+.blog-qualitas-page .site-header .custom-logo-link img,
+.blog-qualitas-page .site-header .custom-logo-link .custom-logo {
+	max-width: 150px;
+	width: 150px;
+	height: auto;
+}
+
+@media (max-width: 921px) {
+	.blog-qualitas-page .site-header .custom-logo-link img,
+	.blog-qualitas-page .site-header .custom-logo-link .custom-logo {
+		max-width: 120px;
+		width: 120px;
+	}
+}
+
+@media (max-width: 544px) {
+	.blog-qualitas-page .site-header .custom-logo-link img,
+	.blog-qualitas-page .site-header .custom-logo-link .custom-logo {
+		max-width: 100px;
+		width: 100px;
+	}
+}
+
 .blog-qualitas-home {
 	max-width: var(--blog-max-width, 1266px);
 	margin: 0 auto;

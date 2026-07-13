@@ -371,6 +371,144 @@
 	margin-top: 15px;
 }
 
+.blog-qualitas-single .blog-sidebar-form-gmm #DivGMM {
+	display: block !important;
+	margin-bottom: 20px;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM {
+	padding: 15px;
+	border: 1px solid #E5E5E5;
+	border-radius: 10px;
+	background: #fff;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 0 !important;
+	box-sizing: border-box;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM h1 {
+	margin: 0 0 14px;
+	font-size: 15pt;
+	font-weight: 700;
+	color: var(--blog-primary, #00008F);
+	line-height: 1.25;
+	text-align: center;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM h1.movil {
+	display: none;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM #gmm1 {
+	width: 100%;
+	margin-top: 0 !important;
+	margin-bottom: 10px;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .grid3 {
+	display: grid;
+	grid-template-columns: 32% 32% 32%;
+	justify-content: space-between;
+	gap: 10px 0;
+	margin-bottom: 10px;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .grid2 {
+	display: grid;
+	grid-template-columns: 48% 48%;
+	justify-content: space-between;
+	gap: 10px 0;
+	margin-top: 0 !important;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM input,
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM select {
+	width: 100%;
+	font-size: 12pt;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #E5E5E5;
+	background: #fff;
+	color: #333;
+	box-sizing: border-box;
+	margin-bottom: 0;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM input::placeholder {
+	color: #666;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM select {
+	color: #666;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM select:valid,
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM input:not(:placeholder-shown) {
+	color: #000;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM input:focus,
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM select:focus {
+	outline: none;
+	border-color: var(--blog-primary, #00008F);
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM #email1 {
+	padding-left: 5px !important;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .terminos {
+	display: grid;
+	grid-template-columns: 20px 1fr;
+	gap: 8px;
+	align-items: start;
+	margin: 12px 0;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .terminos p {
+	margin: 0;
+	font-size: 7pt;
+	line-height: 1.35;
+	color: #333;
+	text-align: left;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .terminos input[type="checkbox"] {
+	width: auto;
+	margin: 2px 0 0;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM button[type="submit"] {
+	width: 100%;
+	border: none !important;
+	background: var(--blog-btn-primary-bg, #FF1721) !important;
+	color: #fff !important;
+	font-size: 15px !important;
+	font-weight: 700;
+	padding: 10px 16px !important;
+	border-radius: 4px !important;
+	cursor: pointer;
+	box-shadow: 0 3px 0 var(--blog-accent-dark, #960000);
+	transition: background 0.2s ease, box-shadow 0.2s ease;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM input.is-invalid,
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM select.is-invalid {
+	border-color: #d63638;
+	color: #d63638;
+}
+
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM button[type="submit"]:hover,
+.blog-qualitas-single .blog-sidebar-form-gmm #formGMM button[type="submit"]:focus {
+	background: var(--blog-btn-primary-hover, #960000) !important;
+	box-shadow: 0 2px 0 var(--blog-accent-dark, #960000);
+}
+
+.blog-qualitas-single .blog-sidebar-widgets .widget {
+	margin-bottom: 15px;
+}
+
 .blog-quote-loader-overlay {
 	position: fixed;
 	inset: 0;
@@ -496,5 +634,18 @@
 
 	.blog-qualitas-single #imgarticulo {
 		width: 100%;
+	}
+
+	.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .grid2,
+	.blog-qualitas-single .blog-sidebar-form-gmm #formGMM .grid3 {
+		grid-template-columns: 100%;
+	}
+
+	.blog-qualitas-single .blog-sidebar-form-gmm #formGMM h1.desk {
+		display: none;
+	}
+
+	.blog-qualitas-single .blog-sidebar-form-gmm #formGMM h1.movil {
+		display: block;
 	}
 }

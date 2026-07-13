@@ -90,7 +90,7 @@ function astra_child_get_quote_widget_config() {
  * Encola assets del widget de cotización en notas.
  */
 function astra_child_enqueue_quote_widget_assets() {
-	if ( ! is_singular( 'post' ) ) {
+	if ( ! is_singular( 'post' ) || ! astra_child_post_uses_auto_sidebar_form() ) {
 		return;
 	}
 
