@@ -1,0 +1,7 @@
+# Desarrollo local (no subir a producción)
+wp-config.local.php
+.htaccess.local
+wp-config-docker.php
+
+# Sistema
+.DS_Store
