@@ -5,7 +5,7 @@
  * @package WordPress
  */
 
-define( 'DB_NAME', 'lpaxablog_db' );
+define( 'DB_NAME', 'lp_axaenlinea_db' );
 define( 'DB_USER', 'blog' );
 define( 'DB_PASSWORD', 'Seguro2023' );
 define( 'DB_HOST', '172.26.110.9' );
