@@ -16,9 +16,12 @@ function astra_child_get_quote_widget_api_config() {
 	return apply_filters(
 		'astra_child_quote_widget_api_config',
 		array(
-			'brands_api'          => 'https://nodejsapisiva-production.up.railway.app/getMarcas',
-			'model_api'           => 'https://gen_wsapp.segurointeligente.mx/WsGenericoSI.svc/GetModelo',
-			'subbrand_api'        => 'https://gen_wsapp.segurointeligente.mx/WsGenericoSI.svc/GetSubMarcas',
+			'catalog_token_api'   => 'https://apis.segurointeligente.mx/api/Autenticacion/GetToken',
+			'brands_api'          => 'https://apis.segurointeligente.mx/api/Catalogos/GetMarcas',
+			'model_api'           => 'https://apis.segurointeligente.mx/api/Catalogos/GetModelos',
+			'subbrand_api'        => 'https://apis.segurointeligente.mx/api/Catalogos/GetLineaSubMarca',
+			'catalog_user'        => 'segurointeligente',
+			'catalog_pass'        => 'Gmag2023*',
 			'token_api'           => 'https://wsservicios.gmag.com.mx/System/WsController/GenerarToken',
 			'prospect_api'        => 'https://wsservicios.gmag.com.mx/ZoohoTools/CRM/CrearProspectosSI',
 			'phone_validate_api'  => 'https://wsgenerico.segurointeligente.mx/Servicios/ValidatePhone',

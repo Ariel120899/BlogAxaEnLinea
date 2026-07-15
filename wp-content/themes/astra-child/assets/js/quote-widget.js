@@ -103,12 +103,61 @@
 		});
 	}
 
+	function getCatalogToken(forceNew) {
+		var storedToken = !forceNew ? localStorage.getItem('tokenMAG') : null;
+		if (storedToken) {
+			return Promise.resolve(storedToken);
+		}
+
+		return fetch(api.catalog_token_api, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				usuario: api.catalog_user || '',
+				contrasena: api.catalog_pass || '',
+			}),
+		})
+			.then(function (response) {
+				if (!response.ok) {
+					throw new Error('Catalog token request failed');
+				}
+				return response.json();
+			})
+			.then(function (result) {
+				var token = result && (result.token || result.Token || result.access_token);
+				if (!token) {
+					throw new Error('Catalog token unavailable');
+				}
+				localStorage.setItem('tokenMAG', token);
+				return token;
+			});
+	}
+
+	function fetchCatalog(url, options, retry) {
+		return getCatalogToken(false).then(function (token) {
+			var requestOptions = Object.assign({}, options || {});
+			requestOptions.headers = Object.assign({}, requestOptions.headers || {}, {
+				Authorization: 'Bearer ' + token,
+			});
+
+			return fetch(url, requestOptions).then(function (response) {
+				if (response.status === 401 && retry !== false) {
+					localStorage.removeItem('tokenMAG');
+					return getCatalogToken(true).then(function () {
+						return fetchCatalog(url, options, false);
+					});
+				}
+				return response;
+			});
+		});
+	}
+
 	function loadBrands() {
-		if (!brandSelect || !api.brands_api) {
+		if (!brandSelect || !api.brands_api || !api.catalog_token_api) {
 			return;
 		}
 
-		fetch(api.brands_api)
+		fetchCatalog(api.brands_api, { method: 'GET' })
 			.then(function (response) {
 				if (!response.ok) {
 					throw new Error('Brands request failed');
@@ -116,15 +165,14 @@
 				return response.json();
 			})
 			.then(function (data) {
+				var brands = data && Array.isArray(data.response) ? data.response : [];
 				fillSelect(
 					brandSelect,
 					placeholders.marca || 'Marca',
-					Array.isArray(data) ? data : [],
+					brands,
 					function (item) {
-						return {
-							value: item.Marca,
-							label: item.Marca,
-						};
+						var name = item.nombre || item.Marca || item.marca || '';
+						return { value: name, label: name };
 					}
 				);
 			})
@@ -151,13 +199,14 @@
 			return;
 		}
 
-		var url = api.model_api +
-			'?Usuario=' + encodeURIComponent(api.ws_user || '') +
-			'&Pass=' + encodeURIComponent(api.ws_pass || '') +
-			'&RangoModelo=' + encodeURIComponent(api.model_range || '2005') +
-			'&Marca=' + encodeURIComponent(marca);
-
-		fetch(url)
+		fetchCatalog(api.model_api, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				nombreMarca: marca,
+				rango: api.model_range || '2005',
+			}),
+		})
 			.then(function (response) {
 				if (!response.ok) {
 					throw new Error('Models request failed');
@@ -165,17 +214,12 @@
 				return response.json();
 			})
 			.then(function (data) {
-				fillSelect(
-					modelSelect,
-					placeholders.modelo || 'Modelo',
-					Array.isArray(data) ? data : [],
-					function (item) {
-						return {
-							value: item.MODMIN,
-							label: item.MODMIN,
-						};
-					}
-				);
+				var models = data && data.response && Array.isArray(data.response.anio)
+					? data.response.anio
+					: [];
+				fillSelect(modelSelect, placeholders.modelo || 'Modelo', models, function (item) {
+					return { value: item, label: item };
+				});
 				fillSelect(subbrandSelect, placeholders.submarca || 'Submarca', [], function (item) {
 					return item;
 				});
@@ -203,13 +247,14 @@
 			return;
 		}
 
-		var url = api.subbrand_api +
-			'?Usuario=' + encodeURIComponent(api.ws_user || '') +
-			'&Pass=' + encodeURIComponent(api.ws_pass || '') +
-			'&Marca=' + encodeURIComponent(marca) +
-			'&Modelo=' + encodeURIComponent(modelo);
-
-		fetch(url)
+		fetchCatalog(api.subbrand_api, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				nombreMarca: marca,
+				anio: modelo,
+			}),
+		})
 			.then(function (response) {
 				if (!response.ok) {
 					throw new Error('Subbrands request failed');
@@ -217,17 +262,12 @@
 				return response.json();
 			})
 			.then(function (data) {
-				fillSelect(
-					subbrandSelect,
-					placeholders.submarca || 'Submarca',
-					Array.isArray(data) ? data : [],
-					function (item) {
-						return {
-							value: item.SUBMARHOM,
-							label: item.SUBMARHOM,
-						};
-					}
-				);
+				var subbrands = data && data.response && Array.isArray(data.response.subMarca)
+					? data.response.subMarca
+					: [];
+				fillSelect(subbrandSelect, placeholders.submarca || 'Submarca', subbrands, function (item) {
+					return { value: item, label: item };
+				});
 				subbrandSelect.focus();
 			})
 			.catch(function () {

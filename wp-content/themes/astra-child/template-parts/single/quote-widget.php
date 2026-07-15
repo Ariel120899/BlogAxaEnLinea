@@ -14,7 +14,7 @@ $placeholder   = function ( $key, $default = '' ) use ( $placeholders ) {
 };
 ?>
 <div id="DivAuto" class="blog-quote-widget">
-	<form id="FormAuto" class="blog-quote-form" action="<?php echo esc_url( $config['form_action'] ); ?>" method="post" novalidate>
+	<form id="FormAuto" class="blog-quote-form" action="<?php echo esc_url( $config['form_action'] ?? '' ); ?>" method="post" novalidate>
 		<h1 class="blog-quote-form__title"><?php echo esc_html( $config['title'] ); ?></h1>
 
 		<p class="blog-quote-form__section-title"><?php esc_html_e( 'Datos de tu auto', 'astra-child' ); ?></p>
