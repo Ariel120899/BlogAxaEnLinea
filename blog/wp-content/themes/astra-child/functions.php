@@ -19,6 +19,7 @@ require_once get_stylesheet_directory() . '/inc/sidebar-form.php';
 require_once get_stylesheet_directory() . '/inc/quote-widget.php';
 require_once get_stylesheet_directory() . '/inc/gmm-widget.php';
 require_once get_stylesheet_directory() . '/inc/footer.php';
+require_once get_stylesheet_directory() . '/inc/related-posts-selector.php';
 
 /**
  * Registra las barras laterales del blog.

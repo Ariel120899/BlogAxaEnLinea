@@ -312,31 +312,36 @@ function astra_child_get_author_bio_highlight( $author_id = null ) {
 /**
  * Entradas relacionadas por meta personalizada o categoría.
  *
+ * @param int|null $post_id ID del post.
+ * @param int      $limit   Cantidad máxima.
  * @return WP_Query
  */
 function astra_child_get_related_posts_query( $post_id = null, $limit = 6 ) {
-	$post_id = $post_id ? $post_id : get_the_ID();
-	$meta_key = apply_filters( 'astra_child_related_posts_meta_key', '_si_notas_relacionadas' );
-	$related_ids = get_post_meta( $post_id, $meta_key, true );
+	$post_id            = $post_id ? $post_id : get_the_ID();
+	$manual_related_ids = function_exists( 'si_get_related_post_ids' ) ? si_get_related_post_ids( $post_id ) : array();
 
-	$args = array(
-		'post_type'      => 'post',
-		'post_status'    => 'publish',
-		'posts_per_page' => $limit,
-		'post__not_in'   => array( $post_id ),
-	);
-
-	if ( ! empty( $related_ids ) && is_array( $related_ids ) ) {
-		$args['post__in'] = array_map( 'absint', $related_ids );
-		$args['orderby']  = 'post__in';
+	if ( ! empty( $manual_related_ids ) ) {
+		$args = array(
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => $limit,
+			'post__in'       => $manual_related_ids,
+			'orderby'        => 'post__in',
+		);
 	} else {
+		$args = array(
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => $limit,
+			'post__not_in'   => array( $post_id ),
+			'orderby'        => 'rand',
+		);
+
 		$category = astra_child_get_primary_category( $post_id );
 
 		if ( $category ) {
 			$args['cat'] = $category->term_id;
 		}
-
-		$args['orderby'] = 'rand';
 	}
 
 	return new WP_Query( $args );
