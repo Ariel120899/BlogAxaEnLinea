@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+</head>
+<body>
+    <section class="head">
+		<div>
+			<img src="img/logo-axa.svg" alt="logo axa" width="60">
+		</div>
+        <div class="movil">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25" fill="#FF1721" onclick="myFunction()"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            <div class="menumovil hide" id="menu">
+                <div style="display: flex; justify-content: space-between;">
+                    <img src="img/logo-axa.svg" alt="logo axa" width="50">
+                    <img src="img/boton-cerrar-menu.svg" alt="cerrar" width="30" onclick="myFunction()">
+                </div>
+                <hr>
+                <div class="flex" onclick="window.location.href='tel:5530987211'">
+                    <img src="img/boton-telefono-movil.svg" alt="btn llamada" width="40">
+                    <h4>Atención al cliente</h4>
+                </div>
+                <hr>
+                <div class="flex" onclick="window.location.href='tel: 5530987203'">
+                    <img src="img/boton-telefono-movil.svg" alt="btn llamada" width="40">
+                    <h4>Ventas</h4>
+                </div>
+                <hr>
+                <div class="flex" onclick="window.open('https://axasegurodeauto.com.mx/blog')">
+                    <img src="img/boton-blog-movil.svg" alt="btn blog" width="40">
+                    <h4>Blog</h4>
+                </div>
+            </div>
+        </div>
+		<div class="telefonosgrid desk">
+            <div>
+                <button class="btn-blog" onclick="window.open('https://axasegurodeauto.com.mx/blog')">Blog</button>
+            </div>
+			<div class="flex btn-morado link btn-azul" onclick="window.location.href='tel:5530987211'">
+				<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#00008F" width="15" class="svg"><defs></defs><g><g id="Capa_1"><path class="cls-1" d="M241.96,180c-.68-.54-50.29-36.3-63.91-33.73-6.5,1.15-10.22,5.58-17.68,14.46-1.2,1.43-4.08,4.87-6.33,7.31-4.71-1.54-9.31-3.41-13.76-5.6-22.95-11.17-41.5-29.72-52.67-52.67-2.19-4.45-4.06-9.04-5.6-13.76,2.45-2.25,5.88-5.13,7.35-6.37,8.83-7.42,13.28-11.13,14.42-17.65,2.36-13.5-33.37-63.45-33.75-63.9-3.28-4.69-8.5-7.66-14.21-8.08C41.35,0,0,53.64,0,62.67c0,.52.76,53.89,66.57,120.83,66.87,65.73,120.23,66.49,120.76,66.49,9.04,0,62.67-41.35,62.67-55.83-.42-5.69-3.37-10.89-8.04-14.17h0Z"/></g></g></svg>
+				<h5>Atención al cliente <br><strong class="desk">55 3098 7211</strong></h5>
+			</div>
+			<div class="flex btn-morado link" onclick="window.location.href='tel:5530987203'">
+				<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#00008F" width="15"><defs></defs><g><g id="Capa_1"><path class="cls-1" d="M241.96,180c-.68-.54-50.29-36.3-63.91-33.73-6.5,1.15-10.22,5.58-17.68,14.46-1.2,1.43-4.08,4.87-6.33,7.31-4.71-1.54-9.31-3.41-13.76-5.6-22.95-11.17-41.5-29.72-52.67-52.67-2.19-4.45-4.06-9.04-5.6-13.76,2.45-2.25,5.88-5.13,7.35-6.37,8.83-7.42,13.28-11.13,14.42-17.65,2.36-13.5-33.37-63.45-33.75-63.9-3.28-4.69-8.5-7.66-14.21-8.08C41.35,0,0,53.64,0,62.67c0,.52.76,53.89,66.57,120.83,66.87,65.73,120.23,66.49,120.76,66.49,9.04,0,62.67-41.35,62.67-55.83-.42-5.69-3.37-10.89-8.04-14.17h0Z"/></g></g></svg>
+				<h5>Ventas <br><strong class="desk">55 3098 7203</strong></h5>
+			</div>
+		</div>
+	</section>
+    <section class="padding0">
+        <div class="bg-azul">
+            <div class="center">
+                <div class="titulo">
+                    <h1>Cotiza con AXA Seguros Auto</h1>
+                    <br>
+                    <p class="p">Protege lo que más valoras y conduce con la confianza de estar asegurado por AXA</p>
+                    <br>
+                </div>
+                <img src="img/seguro-auto-axa-01.webp" alt="seguro auto axa" width="320" class="img-axa">
+                <p class="promo">Contrata tu seguro con el <br><strong>15% DE DESCUENTO</strong><br> y paga tu póliza a 3 y 6 MSI con TDC participantes</p>
+            </div>
+            <div>
+                <form id="formCotizacionGNP">
+                    <h3 class="center">Ingresa los datos de tu vehículo y cotiza tu seguro aquí.</h3>
+                    <p class="center subtitle">Datos del auto</p>
+                    <div style="display:none;">
+                        <input type="text" id="utmc" name="utmc">
+                        <input type="text" id="gclid" name="gclid">
+                        <input type="hidden" id="zc_gad" name="zc_gad" value="">
+                    </div>
+                    <div class="grid2">
+                        <div>
+                            <label>Marca</label>
+                            <select name="marca" id="slc-marcas" required>
+                                <option value="">Selecciona la marca</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Modelo</label>
+                            <select name="modelo" id="slc-anio" required>
+                                <option value="">Selecciona</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Sub marca</label>
+                            <select name="descripcion" id="slc-descripcion" required>
+                                <option value="">Selecciona</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Versión</label>
+                            <select name="descripcionCompleta" id="slc-descripcionCompleta" required>
+                                <option value="">Selecciona</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="center subtitle">Datos del conductor</p>
+                    <div class="grid3">
+                        <div>
+                            <label>Edad</label>
+                            <select name="FNacimiento" id="Fnaci" required>
+                                <option value="">Selecciona</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Género</label>
+                            <select name="genero" id="genero" required>
+                                <option value="">Selecciona</option>
+                                <option value="1">Femenino</option>
+                                <option value="0">Masculino</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Código postal</label>
+                            <input type="text" placeholder="Código postal" id="cepe" name="CP" maxlength="5" minlength="5" class="soloNumeros" inputmode="numeric" required>
+                        </div>
+                    </div>
+                    <div class="grid2">
+                        <div>
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Ingresa tu nombre" maxlength="25" class="soloLetras" id="nombre" name="nombre" required>
+                        </div>
+                        <div>
+                            <label>Apellido</label>
+                            <input type="text" placeholder="Ingresa tu apellido" maxlength="25" class="soloLetras" id="ApPaterno" name="ApPaterno" required>
+                        </div>
+                        <div>
+                            <label>E-Mail</label>
+                            <input type="email" placeholder="Ingresa tu e-mail" name="correo" id="correo" data-type="email" required>
+                        </div>
+                        <div>
+                            <label>Celular</label>
+                            <input type="text" placeholder="Ingresa tu número celular" maxlength="10" minlength="10" class="soloNumeros" id="Tel" name="Tel" inputmode="numeric" required>
+                        </div>
+                    </div>
+                    <div class="terminos">
+                        <input type="checkbox" checked required>
+                        <p>He leído y estoy de acuerdo con el <a href="https://segurointeligente.mx/public/pdf/legales/aviso-de-privacidad.pdf" target="_blank" rel="noopener">Aviso de Privacidad</a> y <a href="https://segurointeligente.mx/public/pdf/legales/aviso-de-privacidad.pdf" target="_blank" rel="noopener">Políticas de Uso</a>. <br>Acepto recibir información de SeguroInteligente.mx y de sus filiales.</p>
+                    </div>
+                    <div class="center">
+                        <button id="btnCG" type="submit">¡Cotiza gratis!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="center">
+        <h2>Coberturas del Seguro para Auto AXA</h2>
+        <p>Protege tu auto ante cualquier situación a la que puedas estar expuesto mientras conduces.</p>
+        <br>
+        <div class="slide">
+            <div>
+                <span class="w3-left flecha" id="prevBtn" onclick="plusDivs(-1)" style="transform: scaleX(-1);">➜</span>
+            </div>
+            <div class="coberturas-slide">
+                <div class="cobertura">
+                    <img src="img/icono-robo-de-auto.svg" alt="Robo de auto" width="75" height="75">
+                    <h4>Robo de auto</h4>
+                    <p>Te apoyamos en caso de robo total de tu vehículo y las pérdidas o daños materiales que sufra a consecuencia de su robo total.</p>
+                </div>
+                <div class="cobertura">
+                    <img src="img/icono-danos-a-terceros.svg" alt="Daños a terceros" width="75" height="75">
+                    <h4>Daños a terceros</h4>
+                    <p>Te protegemos si causas daños a terceros en sus bienes materiales, lesiones o fallecimiento.</p>
+                </div>
+                <div class="cobertura">
+                    <img src="img/icono-atencion-extranjero.svg" alt="Atención en el extranjero" width="75" height="75">
+                    <h4>Atención en el extranjero</h4>
+                    <p>Viaja tranquilo a Estados Unidos o Canadá con nuestra cobertura de Responsabilidad Civil en el extranjero.</p>
+                </div>
+                <div class="cobertura">
+                    <img src="img/icono-danos-materiales.svg" alt="Daños materiales" width="75" height="75">
+                    <h4>Daños materiales</h4>
+                    <p>Cubrimos la reparación por los daños materiales que sufra tu vehículo a consecuencia de un accidente.</p>
+                </div>
+                <div class="cobertura">
+                    <img src="img/icono-rc-danos-terceros.svg" alt="Responsabilidad civil daños a terceros" width="75" height="75">
+                    <h4>Responsabilidad civil daños a terceros</h4>
+                    <p>Cubrimos el pago de indemnización por daños materiales a terceros.</p>
+                </div>
+                <div class="cobertura">
+                    <img src="img/icono-gastos-medicos-ocupantes.svg" alt="Gastos médicos ocupantes" width="75" height="75">
+                    <h4>Gastos médicos ocupantes</h4>
+                    <p>Los gastos de hospitalización, atención médica, ambulancia y entierro para ti o cualquier ocupante están cubiertos.</p>
+                </div>
+                <div class="cobertura">
+                    <img src="img/icono-defensa-legal.svg" alt="Defensa legal" width="75" height="75">
+                    <h4>Defensa legal</h4>
+                    <p>Recibe asesoría legal las 24 horas, los 365 días, desde presentación hasta la conclusión del asunto penal.</p>
+                </div>
+            </div>
+            <div>
+                <span class="w3-left flecha" id="nextBtn" onclick="plusDivs(1)">➜</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="bg-gris center">
+            <h2>Coberturas adicionales</h2>
+            <br>
+            <div class="coberturas-container">
+                <div class="adicionales-slide">
+                    <div class="adicionales">
+                        <h4>Reparación en <br class="desk"> talleres autorizados</h4>
+                        <p>Si llegas a tener un siniestro que cause daños materiales, tu vehículo será reparado en concesionarios oficiales.</p>
+                    </div>
+                    <div class="adicionales">
+                        <h4>Cobertura para daños <br class="desk">en llantas y rines</h4>
+                        <p>En caso de que la llanta o el rin de tu automóvil sufran un daño que no pueda repararse, recibirás apoyo de hasta 25,000 pesos para su reemplazo.</p>
+                    </div>
+                    <div class="adicionales">
+                        <h4>Gastos <br class="desk">de transporte</h4>
+                        <p>Cubre un monto de 350 pesos diarios para transporte mientras tu vehículo se encuentre en el taller.</p>
+                    </div>
+                    <div class="adicionales">
+                        <h4>Cobertura<br class="desk"> de equipo especial</h4>
+                        <p>Protege los accesorios adicionales al equipo original, siempre que estos hayan sido declarados al contratar tu seguro.</p>
+                    </div>
+                    <div class="adicionales">
+                        <h4>Adaptaciones <br class="desk">o conversiones</h4>
+                        <p>Incluye protección contra daños materiales y robo total de las adaptaciones o conversiones instaladas en tu vehículo, siempre que estén declaradas en tu póliza.</p>
+                    </div>
+                    <div class="adicionales">
+                        <h4>Pago de multas <br class="desk">y corralones</h4>
+                        <p>Cubre el pago de multas relacionadas con infracciones derivadas de un accidente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dots"></div>
+        </div>
+    </section>
+    <section>
+        <div class="flex-section w80">
+            <div>
+                <img src="img/seguro-auto-axa-03.webp" alt="asistencias con axa" height="370">
+            </div>
+            <div class="asistencias-sec">
+                <h2>Asistencias con AXA Seguros para Autos</h2>
+                <p>Protege tu coche ante las situaciones inesperadas en tus trayectos.</p>
+                <br>
+                <div>
+                    <h4 onclick="down('cambio')"><span id="cambio-i">-</span> Servicio de cambio de llantas</h4>
+                    <p id="cambio" class="hide show">Envío de apoyo en caso de solicitar servicio de emergencia para cambio de llanta.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('mecanico')"><span id="mecanico-i">+</span> Envío y pago de mecánico.</h4>
+                    <p id="mecanico" class="hide">Te cubrimos con asistencia de un mecánico en caso de falta de gasolina, acumulador descargado o llanta ponchada.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('grua')"><span id="grua-i">+</span> Envío y pago de grúa.</h4>
+                    <p id="grua" class="hide">Gestión del servicio de remolque hasta el taller más cercano cubriendo los gastos del traslado.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('talleres')"><span id="talleres-i">+</span> Referencias de talleres mecánicos.</h4>
+                    <p id="talleres" class="hide">Encuentra los talleres mecánicos más cercanos al lugar de la avería.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('robo')"><span id="robo-i">+</span> Asistencia en robo total.</h4>
+                    <p id="robo" class="hide">Acompañamiento en los pasos que debes seguir desde la búsqueda telefónica, hasta la denuncia.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('medico')"><span id="medico-i">+</span> Traslado médico.</h4>
+                    <p id="medico" class="hide">Si debido a un accidente se requiere hospitalización, se realiza el traslado al centro médico más cercano.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('referencia')"><span id="referencia-i">+</span> Referencia médica.</h4>
+                    <p id="referencia" class="hide">Recibe orientación para solicitar la visita de un médico o concertar una cita.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('funerarios')"><span id="funerarios-i">+</span> Asistencia para trámites funerarios.</h4>
+                    <p id="funerarios" class="hide">Apoyo para trámites legales y administrativos de servicio forense, obtención de documentos oficiales y gastos funerarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="center">Encuentra el plan AXA que se ajusta a ti</h2>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th-300">Cobertura</th>
+                        <th class="th-180">Amplia Plus</th>
+                        <th class="th-180">Amplia</th>
+                        <th class="th-180">Amplia Básica</th>
+                        <th class="th-180">Esencial</th>
+                        <th class="th-180">Básica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tdth">Daños materiales</td>
+                        <td>Valor comercial 3%</td>
+                        <td>Valor comercial 5%</td>
+                        <td>Valor comercial 8%</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Robo total</td>
+                        <td>Valor comercial 5%</td>
+                        <td>Valor comercial 10%</td>
+                        <td>Valor comercial 12%</td>
+                        <td>Valor comercial 10%</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Responsabilidad civil por daños a terceros</td>
+                        <td>$1,250,000</td>
+                        <td>$1,000,000</td>
+                        <td>$800,000</td>
+                        <td>$750,000</td>
+                        <td>$750,000</td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Servicios de asistencia</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Gastos médicos ocupantes</td>
+                        <td>$250,000</td>
+                        <td>$200,000</td>
+                        <td>$100,000</td>
+                        <td>$150,000</td>
+                        <td>$150,000</td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Defensa legal</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Extensión de RC</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td>Opcional</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td>Opcional</td>
+                        <td>Opcional</td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">RC personas en exceso</td>
+                        <td>$3,000,000</td>
+                        <td>$3,000,000</td>
+                        <td>$2,000,000</td>
+                        <td>$3,000,000</td>
+                        <td>$3,000,000</td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Accidentes automovilisticos al conductor</td>
+                        <td>$100,000</td>
+                        <td>Opcional</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td>Opcional</td>
+                        <td>Opcional</td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Auto consentido</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td>Opcional</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Robo parcial de autopartes</td>
+                        <td>$25,000 Ded 25%</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">Eliminación de deducible y devolución de primas</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td>Opcional</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                    </tr>
+                    <tr>
+                        <td class="tdth">RC en el extranjero</td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250" fill="#e01c1c" height="20"><g><g id="Capa_1"><g><path class="cls-1" d="M223.9,250c-6.7,0-13.4-2.6-18.5-7.7L7.7,44.6C-2.6,34.4-2.6,17.9,7.7,7.7c10.2-10.2,26.8-10.2,37,0l197.7,197.7c10.2,10.2,10.2,26.8,0,37-5.1,5.1-11.8,7.7-18.5,7.7Z"/><path class="cls-1" d="M26.1,250c-6.7,0-13.4-2.6-18.5-7.7-10.2-10.2-10.2-26.8,0-37L205.4,7.7c10.2-10.2,26.8-10.2,37,0,10.2,10.2,10.2,26.8,0,37L44.6,242.3c-5.1,5.1-11.8,7.7-18.5,7.7Z"/></g></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                        <td><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 196.2" fill="#2fa124" height="20"><g><g id="Capa_1"><polygon class="cls-1" points="84 196.2 0 112.3 30.2 82 84 135.8 219.8 0 250 30.2 84 196.2"/></g></g></svg></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <p class="center small">*Las sumas aseguradas son por ocupante.</p>
+    </section>
+    <section>
+        <div class="bg-gris flex-section">
+            <div>
+                <h2>Beneficios del Seguro de auto AXA en México</h2>
+                <ul class="ulchecked">
+                    <li><strong>Auto Consentido:</strong> Te apoyamos en caso de quedarte sin auto, haya sido robado o sufriste un accidente y lo están reparando en un taller de la red AXA.</li>
+                    <li><strong>Deducible 0% con tercero responsable:</strong> Eliminamos el pago de deducible en caso de accidente, si el tercero es el responsable y no tiene seguro.</li>
+                    <li><strong>Reparación en agencia:</strong> Tu vehículo siempre con refacciones originales.</li>
+                    <li><strong>Protección para llantas y rines:</strong> Cobertura hasta por $25,000.</li>
+                    <li><strong>Transporte alternativo:</strong> $350 diarios mientras tu coche se repara.</li>
+                    <li><strong>Cobertura de equipo especial y adaptaciones.</strong></li>
+                    <li><strong>Pago de multas y corralones.</strong></li>
+                    <li><strong>Cobertura internacional:</strong> Protege tu auto en EE.UU. y Canadá.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="img/seguro-auto-axa-04.webp" alt="axa seguro" height="300">
+            </div>
+        </div>
+    </section>
+    <section class="center">
+        <h2>Contrata tu seguro AXA en línea</h2>
+        <p>En AXA contamos con la tecnología a tu favor, desde cotizaciones hasta la emisión de tu póliza, todo en unos minutos, digital y rápido.</p>
+        <br>
+        <p>Solo debes seguir estos pasos:</p>
+        <br>
+        <div class="slide-numeros">
+            <div class="movil">
+                <span class="w3-left flecha" onclick="plusDivs7(-1)" style="transform: scaleX(-1);">➜</span>
+            </div>
+        <div class="grid3 numeros">
+            <div class="box">
+                <i>1</i>
+                <h4>Llena tu formulario con los datos de tu auto.</h4>
+            </div>
+            <div class="box">
+                <i>2</i>
+                <h4>Compara planes y precios.</h4>
+            </div>
+            <div class="box">
+                <i>3</i>
+                <h4>Contrata en minutos y recibe tu póliza digital.</h4>
+            </div>
+        </div>
+        <div class="movil">
+                <span class="w3-left flecha" onclick="plusDivs7(1)">➜</span>
+            </div>
+            </div>
+        <br>
+        <p>Al hacerlo en línea, ya no lidiar con intermediarios ni papeleos, promociones exclusivas y atención personalizadas de nuestros agentes.</p>
+    </section>
+    <section>
+        <h2 class="center">Tipos de Seguros de Auto AXA</h2>
+        <p class="center">Elige el plan que mejor se adapte a ti y lo que necesitas para estar protegido ante cualquier imprevisto:</p>
+        <br>
+        <div class="slide slide-movil">
+            <div class="desk">
+                <span class="w3-left flecha" id="prevBtn" onclick="plusDivs2(-1)" style="transform: scaleX(-1);">➜</span>
+            </div>
+            <div class="tiposseguros-container">
+                <div class="tiposseguros-slide">
+                    <div class="card tiposseguros">
+                        <div class="card-head">
+                            <h4>Seguro de Auto Particular</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="small">Es la opción ideal para quienes usan su auto todos los días, te ofrecemos coberturas como:</p>
+                            <ul class="ulcircle">
+                                <li>Daños materiales.</li>
+                                <li>Robo total.</li>
+                                <li>Responsabilidad civil daños a terceros.</li>
+                                <li>Gastos médicos a ocupantes.</li>
+                                <li>Defensa legal.</li>
+                            </ul>
+                            <p class="small"><strong>Extras que puedes agregar:</strong></p>
+                            <ul class="ulcircle">
+                                <li>Reparación en agencia.</li>
+                                <li>Ayuda para llantas y rines.</li>
+                                <li>Gastos de transporte mientras tu auto está en reparación.</li>
+                                <li>Protección de equipo especial.</li>
+                                <li>Cobertura de multas y corralones.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card tiposseguros">
+                        <div class="card-head">
+                            <h4>Seguro Multiplataforma</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="small">Diseñado para conductores de apps como <strong>Uber, Didi, Beat o Cabify.</strong> Con AXA, tu coche está protegido dentro y fuera de la aplicación:</p>
+                            <ul class="ulcircle">
+                                <li>Cobertura como auto particular o de trabajo.</li>
+                                <li>Daños materiales y robo.</li>
+                                <li>RC a terceros.</li>
+                                <li>Gastos médicos a ocupantes.</li>
+                                <li>Asistencia vial y defensa legal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card tiposseguros">
+                        <div class="card-head">
+                            <h4>Seguro Obligatorio de Responsabilidad Civil</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="small">Cumples con los requisitos legales para circular por el país o tu estado, con protección básica ante daños a terceros.</p>
+                            <br>
+                            <p class="small"><strong>Modalidades disponibles</strong></p>
+                            <ul class="ulcircle">
+                                <li><strong>Federal:</strong> para circular por todo México.</li>
+                                <li><strong>Estatal:</strong> para cumplir con la ley en tu entidad.</li>
+                            </ul>
+                            <p class="small"><strong>Incluye:</strong></p>
+                            <ul class="ulcircle">
+                                <li>Responsabilidad Civil por daños a personas y bienes.</li>
+                                <li>Asesoría legal.</li>
+                                <li>Responsabilidad civil viajero.</li>
+                                <li>RC ecológica y por remolque (opcional).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card tiposseguros">
+                        <div class="card-head">
+                            <h4>Seguro de Auto Turista</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="small">Ideal para autos con <strong>placas extranjeras</strong> que circulan temporalmente en México. Podrás viajar protegido con coberturas como:</p>
+                            <ul class="ulcircle">
+                                <li>Daños materiales.</li>
+                                <li>Robo total.</li>
+                                <li>Responsabilidad Civil a terceros.</li>
+                                <li>Gastos médicos y defensa legal.</li>
+                            </ul>
+                            <p class="small"><strong>Extras disponibles:</strong></p>
+                            <ul class="ulcircle">
+                                <li>RC por remolque o carga.</li>
+                                <li>Adaptaciones o conversiones.</li>
+                                <li>Equipo especial.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="desk">
+                <span class="w3-left flecha" id="nextBtn" onclick="plusDivs2(1)">➜</span>
+            </div>
+            <div class="movil">
+                <div class="spans">
+					<span class="w3-badge demo" onclick="currentDiv8(1)"></span>
+					<span class="w3-badge demo" onclick="currentDiv8(2)"></span>
+					<span class="w3-badge demo" onclick="currentDiv8(3)"></span>
+                    <span class="w3-badge demo" onclick="currentDiv8(4)"></span>
+				</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="w80 bg-gris flex-section column-reverse">
+            <div>
+                <img src="img/seguro-auto-axa-05.webp" alt="axa seguro"  height="325" class="imgm24">
+            </div>
+            <div>
+                <h2>Exclusiones del seguro de auto AXA</h2>
+                <p>Existen situaciones no contempladas por las pólizas, como:</p>
+                <ul class="ulcheck2">
+                    <li>Conducir sin licencia o bajo efectos de alcohol.</li>
+                    <li>Participar en competencias o actos delictivos.</li>
+                    <li>Daños por guerra o terrorismo.</li>
+                    <li>Sobrecarga del vehículo.</li>
+                    <li>Uso distinto al declarado (particular vs. comercial).</li>
+                </ul>
+                <p>Conocer las exclusiones te permite elegir la cobertura adecuada y evitar sorpresas.</p>
+            </div>
+        </div>
+    </section>
+    <section class="flex-section">
+        <div class="flex80">
+            <h2>Requisitos para contratar tu seguro AXA</h2>
+            <p>Ten a la mano los siguientes datos:</p>
+            <div class="grid2">
+                <div>
+                    <ul class="flechaul">
+                        <li>Nombre completo y RFC del contratante.</li>
+                        <li>Identificación oficial.</li>
+                        <li>Tarjeta de circulación y licencia vigente.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flechaul">
+                        <li>Comprobante de domicilio.</li>
+                        <li>Datos del vehículo (marca, modelo, año, uso).</li>
+                        <li>Tipo de cobertura deseada.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="img/seguro-de-auto-06.webp" alt="requisitos axa" height="220">
+        </div>
+    </section>
+    <section>
+        <div class="bg-gris center">
+            <h2>Herramientas a tu alcance</h2>
+            <p>Conoce los tipos de servicios que puedes hacer con AXA:</p>
+            <br>
+            <div class="herramientas-container">
+                <div class="herramientas-slide">
+                    <div class="herramientas">
+                        <h4>Reporta un Siniestro</h4>
+                        <p>Levanta un siniestro o asistencia.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Portal de Clientes</h4>
+                        <p>Accede a tu espacio de cliente con tu usuario de My AXA.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Accidentes</h4>
+                        <p>Conoce cómo usar cualquiera de tus seguros en caso de accidente.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Asistencia de Autos</h4>
+                        <p>Grúa, cambio de llanta, gasolina, paso de corriente, cerrajero, etc.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Condiciones Generales</h4>
+                        <p>Consulta las condiciones generales que incluye tu póliza con AXA.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Buscador de Servicios</h4>
+                        <p>Ubica los servicios de autos, salud, agentes y mucho más en el mapa.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Beneficios Fiscales</h4>
+                        <p>Conoce más acerca de los beneficios fiscales que ofrecen tus seguros.</p>
+                    </div>
+                    <div class="herramientas">
+                        <h4>Irregularidades</h4>
+                        <p>Reporta irregularidades en tu seguro de Gastos Médicos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dots2"></div>
+        </div>
+    </section>
+    <section>
+        <div class="w80 flex-section">
+            <div>
+                <img src="img/seguro-de-auto-07.webp" alt="seguro axa" height="300">
+            </div>
+            <div>
+                <h2>¿Por qué elegir AXA Seguros?</h2>
+                <p>En AXA, tu tranquilidad es lo que más importa. En la actualidad, contamos con más de 7 millones de conductores en México que confían en nosotros por nuestra experiencia, solidez y atención personalizada.</p>
+                <br>
+                <p>Además, te ofrecemos ventajas como:</p>
+                <ul class="ulcircle">
+                    <li><strong>Red de talleres certificados en todo México.</strong></li>
+                    <li><strong>App My AXA para gestionar tu póliza desde cualquier lugar.</strong></li>
+                    <li><strong>Cobertura nacional y en el extranjero (EE.UU. y Canadá).</strong></li>
+                    <li><strong>Pago a meses sin intereses.</strong></li>
+                    <li><strong>Asistencia vial ilimitada, día y noche.</strong></li>
+                    <li><strong>Auto sustituto hasta por 30 días.</strong></li>
+                    <li><strong>Defensa legal con fianza de hasta $1 millón de pesos.</strong></li>
+                </ul>
+                <p>Con AXA no solo aseguras tu auto, aseguras tu tranquilidad y la de quienes viajan contigo.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="bg-gris center">
+            <h2>AXA Seguros México: experiencia, innovación y confianza</h2>
+            <p>Con más de 60 países de presencia y 108 millones de asegurados a nivel mundial, AXA es una de las aseguradoras más sólidas del mercado.</p>
+        </div>
+    </section>
+    <section class="center">
+        <p>En México cuenta con:</p>
+        <br>
+        <div class="grid3 numeros">
+            <div class="cuenta">
+                <i>+4,000</i>
+                <h4>colaboradores.</h4>
+            </div>
+            <div class="cuenta">
+                <i>+11,000</i>
+                <h4>asesores y distribuidores.</h4>
+            </div>
+            <div class="cuenta">
+                <i>+7</i>
+                <h4>millones de asegurados activos.</h4>
+            </div>
+            <div class="movil">
+                <div class="spans">
+					<span class="w3-badge demo2" onclick="currentDiv9(1)"></span>
+					<span class="w3-badge demo2" onclick="currentDiv9(2)"></span>
+					<span class="w3-badge demo2" onclick="currentDiv9(3)"></span>
+				</div>
+                <br>
+            </div>
+        </div>
+        <p>Nuestro compromiso es claro, proteger lo que más valoras con soluciones accesibles y atención respaldada por tecnología. <br>En AXA Seguros, somo el líder mundial en protección y tranquilidad financiera.</p>
+        <br>
+        <h2 style="color: #FF1721">Conduce sin preocupaciones. Asegura tu auto con la compañía líder en México.</h2>
+    </section>
+    <section>
+        <div class="flex-section" style="justify-content: space-around;">
+            <div class="preguntas">
+                <h2>Preguntas Frecuentes</h2>
+                <div>
+                    <h4 onclick="down('pregunta1')"><span id="pregunta1-i">-</span> ¿Puedo contratar mi seguro AXA en línea?</h4>
+                    <p id="pregunta1" class="hide show">Sí, en AXA puedes cotizar, comparar y contratar tu seguro de auto en línea de forma segura y segura.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('pregunta2')"><span id="pregunta2-i">-</span> ¿Qué hago si tengo un accidente?</h4>
+                    <p id="pregunta2" class="hide">Comunícate al 800 911 1292. Un ajustador llegará para ayudarte con el reporte, valoración de los daños y pasos para activar tu cobertura.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('pregunta3')"><span id="pregunta3-i">-</span> ¿Puedo pagar mi seguro de auto AXA a meses sin intereses?</h4>
+                    <p id="pregunta3" class="hide">En AXA ofrecemos facilidades de pago a meses sin intereses con tarjetas participantes.</p>
+                </div>
+                <div>
+                    <h4 onclick="down('pregunta4')"><span id="pregunta4-i">-</span> ¿Qué beneficios adicionales ofrecemos en AXA?</h4>
+                    <p id="pregunta4" class="hide">Incluimos servicios exclusivos como Auto Consentido, asistencia vial, cobertura en el extranjero y poder eliminar el deducible en algunos planes.</p>
+                </div>
+            </div>
+            <div>
+                <img src="img/seguro-de-auto-08.webp" alt="seguro" height="300">
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+		<img src="img/logo-seguro-inteligente-blanco.svg" alt="segurointeligente.mx" width="100">
+		<p>© 2026 SEGURO INTELIGENTE. Todos los derechos reservados. El uso de este sitio implica que aceptas nuestros Términos y condiciones, así como el <a href="https://segurointeligente.mx/public/pdf/legales/aviso-de-privacidad.pdf">Aviso de privacidad.</a> Agente Autorizado por AXA México.</p>
+		<img src="img/compra-segura.svg" alt="compra segura" width="100">
+	</section>
+    <script src="js/function.js"></script>
+    <script type="module" src="js/control.js"></script>
+    <script type="module" src="js/cargadorutm.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menu");
+            if (x.className.indexOf("show") == -1) {
+                x.className += " show";
+            } else { 
+                x.className = x.className.replace(" show", "");
+            }
+        }
+    </script>
+</body>
+</html>

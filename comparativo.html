@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cotización Seguro de Auto AXA</title>
+	<link rel="stylesheet" href="css/comparativo.css">
+	<link rel="stylesheet" href="css/loader.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="img/logo-axa.svg">
+</head>
+<body>
+	<main>
+	<section>
+		<h1 class="center">¡Felicidades <span id="nombredes"></span>!</h1>
+		<p class="center">Este es el mejor precio para el seguro de tu auto.</p>
+		<div class="grid2">
+			<div class="card center">
+				<div style="padding: 20px;">
+					<div>
+						<img src="img/logo-axa.svg" alt="logo" width="80">
+					</div>
+					<div class="flex2">
+						<p>Marca <br> <strong id="marcades"></strong></p>
+						<p>Modelo <br><strong id="modelodes"></strong></p>
+					</div>
+					<hr>
+					<p>Versión <br><strong id="versiondes"></strong></p>
+					<hr>
+					<div class="grid3">
+						<p>Año <br><strong id="aniodes"></strong></p>
+						<p>Cobertura <br><strong>Amplia</strong></p>
+						<p>Vigencia <br><strong>Anual</strong></p>
+					</div>
+				</div>
+				<h6 id="PrecioRegular"></h6>
+				<div class="flex3">
+					<div>
+						<p><strong>Precio con descuento</strong></p>
+						<h2 id="preciodes"></h2>
+					</div>
+					<div>
+						<h4>+</h4>
+					</div>
+					<div>
+						<h3><strong id="MSIDisponibles">3 y 6 MSI</strong> con</h3>
+						<img src="img/logos-carriers.svg" alt="logos carriers" width="100">
+					</div>
+				</div>
+				<div style="padding: 20px;">
+					<p style="margin-top: 0;" id="BancosParticipantesMSI"><strong>Bancos participantes a MSI:</strong></p>
+				</div>
+			</div>
+			<div class="movil">
+				<div class="btns">
+					<button type="button" class="btn-telefono" id="TofonoM">Contrata por teléfono</button>
+					<button type="button" class="btn-linea" id="CompraOnlineM">¡Contrata ahora!</button>
+				</div>
+			</div>
+			<div class="card">
+				<h2 class="title">Coberturas</h2>
+				<div style="padding: 20px;" id="filasCoberturas"></div>
+			</div>
+		</div>
+		<div class="btns desk">
+			<button type="button" class="btn-telefono" id="Tofono">Contrata por teléfono</button>
+			<button type="button" class="btn-linea" id="CompraOnline">¡Contrata ahora!</button>
+		</div>
+		<div class="center" style="padding: 15px 0;">
+			<a target="_blank" rel="noopener" href="https://axa.mx/documents/51602/72903/AU_347_CG_Autos_Motos_Pick%20ups_Colectividades_junio2021_.pdf/3f385994-42cf-7a6b-6cf2-75637aa8dafc" class="condiciones">Condiciones generales AXA</a>
+		</div>
+		<div class="center" style="padding: 0 0 40px;">
+			<button type="button" class="btn-descarga" id="link">Descargar cotización</button>
+		</div>
+	</section>
+	</main>
+	<section class="footer">
+		<img src="img/logo-seguro-inteligente-blanco.svg" alt="segurointeligente.mx" width="100">
+		<p>© 2026 SEGURO INTELIGENTE. Todos los derechos reservados. El uso de este sitio implica que aceptas nuestros Términos y condiciones, así como el <a href="https://segurointeligente.mx/public/pdf/legales/aviso-de-privacidad.pdf">Aviso de privacidad.</a> Agente Autorizado por AXA México.</p>
+		<img src="img/compra-segura.svg" alt="compra segura" width="100">
+	</section>
+	<script type="module" src="js/Cotizado.js"></script>
+</body>
+</html>
