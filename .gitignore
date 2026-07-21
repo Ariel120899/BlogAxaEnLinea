@@ -1,0 +1,10 @@
+# Entorno local Docker
+.env
+blog/wp-config.local.php
+
+# Logs
+blog/wp-content/debug.log
+*.log
+
+# macOS
+.DS_Store
