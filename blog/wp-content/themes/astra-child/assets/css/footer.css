@@ -10,7 +10,7 @@
 	color: #fff;
 	padding: 20px 30px;
 	display: grid;
-	grid-template-columns: 12% 48% 9% 30%;
+	grid-template-columns: 12% 50% 7% 30%;
 	max-width: var(--blog-max-width, 1266px);
 	margin: 0 auto;
 	align-items: center;

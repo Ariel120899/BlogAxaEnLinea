@@ -46,7 +46,7 @@ $arrow_url    = astra_child_brand_asset_url( 'arrow_footer' );
 				<?php
 				$agent_text = astra_child_get_footer_agent_text();
 				$legal_text = sprintf(
-					'© %1$s SEGURO INTELIGENTE. Todos los derechos reservados. El uso de este sitio implica que aceptas nuestros Términos y condiciones, así como el <a href="%2$s">Aviso de privacidad</a>. %3$s',
+					'© %1$s  Todos los derechos reservados. El uso de este sitio implica que aceptas nuestros Términos y condiciones, así como el <a href="https://segurointeligente.mx/public/pdf/legales/aviso-de-privacidad.pdf">Aviso de privacidad</a>. %3$s',
 					esc_html( gmdate( 'Y' ) ),
 					esc_url( $privacy_url ),
 					esc_html( $agent_text )
