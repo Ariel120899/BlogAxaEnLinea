@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Páginas de funnel / gracias (no indexar)
+Disallow: /thanks.html
+Disallow: /comparativo.html
+
+Sitemap: https://axasegurosenlinea.com.mx/sitemap.xml
+Sitemap: https://axasegurosenlinea.com.mx/blog/sitemap_index.xml

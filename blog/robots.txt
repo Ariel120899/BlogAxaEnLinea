@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://axasegurosenlinea.com.mx/blog/sitemap_index.xml
